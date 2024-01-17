@@ -2,13 +2,14 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from . import views
+from .views import static_page
 
 app_name = 'djangoapp'
 urlpatterns = [
     # route is a string contains a URL pattern
     # view refers to the view function
     # name the URL
-
+    path('static/', static_page, name='static_page'),
     # path for about view
 
     # path for contact us view
